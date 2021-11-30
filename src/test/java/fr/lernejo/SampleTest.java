@@ -3,7 +3,6 @@ package fr.lernejo;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 class SampleTest {
     @Test
@@ -26,7 +25,7 @@ class SampleTest {
         int a= 1;
         int b = 2;
         int sum = 1+2;
-        Assertions.assertThat(s.op(Sample.Operation.ADD,a,b)).as("1+2").isEqualTo(3);
+        Assertions.assertThat(s.op(Sample.Operation.ADD,a,b)).as("1+2").isEqualTo(sum);
     }
 
     @Test
@@ -35,7 +34,7 @@ class SampleTest {
         int a= 3;
         int b = 5;
         int sum = a+b;
-        Assertions.assertThat(s.op(Sample.Operation.ADD,a,b)).as("3+5").isEqualTo(8);
+        Assertions.assertThat(s.op(Sample.Operation.ADD,a,b)).as("3+5").isEqualTo(sum);
     }
 
     @Test
@@ -44,7 +43,7 @@ class SampleTest {
         int a = 5;
         int b = 4;
         int mult= 5*4;
-        Assertions.assertThat(s.op(Sample.Operation.MULT,a,b)).as("5 * 4").isEqualTo(20);
+        Assertions.assertThat(s.op(Sample.Operation.MULT,a,b)).as("5 * 4").isEqualTo(mult);
     }
 
     @Test
@@ -53,6 +52,6 @@ class SampleTest {
         int a = 4;
         int b = 4;
         int mult= a*b;
-        Assertions.assertThat(s.op(Sample.Operation.MULT,a,b)).as("4 * 4").isEqualTo(16);
+        Assertions.assertThat(s.op(Sample.Operation.MULT,a,b)).as("4 * 4").isEqualTo(mult);
     }
 }
